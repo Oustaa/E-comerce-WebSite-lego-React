@@ -1,0 +1,163 @@
+* {
+    font-size: 14px;
+}
+
+p {
+    font-size: .83rem;
+}
+
+html {
+    scroll-padding-top: 4rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+}
+
+#carosals {
+    height: 70vh;
+    max-height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carosals__item {
+    min-width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transition: transform 250ms ease-in;
+}
+
+.active {
+    opacity: 1;
+}
+
+.next-carosal {
+    transform: translateX(100%);
+}
+
+.prev-carosal {
+    transform: translateX(-100%);
+}
+
+.carosal-btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:600px) {
+    .carosal-btns {
+        top: 90%;
+        height: fit-content;
+    }
+}
+
+.carosals_content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: #fff;
+}
+
+.carosals_content::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.carosals_content p {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.carosals__item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+}
+
+#catigories {
+    background-color: #fff;
+}
+
+@media screen and (max-width:600px) {
+    #carosals {
+        max-height: 400px;
+    }
+}
+
+.hoverable {
+    border-bottom: 4px transparent solid;
+}
+
+.hoverable:hover {
+    border-bottom: 4px #FFC107 solid;
+}
+
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+
+.image-fluid {
+    max-width: 100%;
+}
+
+.mt-6 {
+    margin-top: 5rem;
+}
+
+.d-end {
+    display: block;
+    margin-left: auto;
+}
+
+.big-text {
+    font-size: 12rem;
+}
+
+.error {
+    height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-small {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.text-light-hover:hover,
+.text-light-hover:focus {
+    background: #f7f7f7;
+    color: #292b2c !important;
+    transition: 250ms ease-in;
+    transition-property: color background-color;
+}
